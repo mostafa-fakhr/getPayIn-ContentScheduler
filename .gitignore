@@ -1,0 +1,50 @@
+# Laravel standard ignores
+
+/vendor
+/node_modules
+
+# Laravel environment files
+.env
+.env.*.backup
+.env.backup
+.env.production
+
+# Laravel storage files (logs, cache, sessions, views)
+storage/*.key
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+
+# Public build files
+/public/build
+/public/hot
+/public/storage
+
+# PHPUnit
+.phpunit.cache
+.phpunit.result.cache
+
+# Composer
+composer.lock
+composer.phar
+
+# NPM/Yarn
+npm-debug.log*
+yarn-error.log*
+
+# IDEs and Editors
+/.idea
+/.vscode
+/.fleet
+
+# Homestead
+Homestead.json
+Homestead.yaml
+
+# Auth configs
+auth.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
