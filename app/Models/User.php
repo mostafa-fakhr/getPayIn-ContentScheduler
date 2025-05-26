@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -49,6 +48,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
     public function platforms()
     {
         return $this->belongsToMany(Platform::class, 'user_platforms')

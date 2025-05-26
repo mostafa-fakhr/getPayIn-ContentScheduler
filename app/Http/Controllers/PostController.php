@@ -7,11 +7,7 @@ use App\Constants\Pagination;
 use App\Http\Requests\CreatePostRequest;
 use App\Http\Requests\DeletePostRequest;
 use App\Http\Requests\GetPostsRequest;
-use App\Http\Requests\GetUserByIdRequest;
-use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\UpdateScheduledPostRequest;
-use App\Http\Requests\UpdateUserRequest;
-use App\Http\Requests\UserLoginRequest;
 use Illuminate\Http\Request;
 use App\Services\PostService;
 

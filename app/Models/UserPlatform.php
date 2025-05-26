@@ -19,7 +19,6 @@ class UserPlatform extends Model
         'is_active',
     ];
 
-    // Relationships
     public function user()
     {
         return $this->belongsTo(User::class);

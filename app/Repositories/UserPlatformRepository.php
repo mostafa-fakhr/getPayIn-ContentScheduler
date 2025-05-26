@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\User;
 use App\Models\Platform;
+use App\Models\UserPlatform;
 
 class UserPlatformRepository
 {
@@ -29,5 +30,22 @@ class UserPlatformRepository
         }
         $user->platforms()->syncWithoutDetaching($syncData);
         return $user->platforms;
+    }
+    public function createDefaultUserPlatforms($userId)
+    {
+        $platforms = Platform::all(['id']);
+
+        $data = [];
+        foreach ($platforms as $platform) {
+            $data[] = [
+                'user_id' => $userId,
+                'platform_id' => $platform->id,
+                'is_active' => 0,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+        }
+
+        UserPlatform::insert($data);
     }
 }
